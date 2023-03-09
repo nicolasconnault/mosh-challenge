@@ -15,9 +15,9 @@ const Card = ({image, ctaLabel, ctaUrl, title, benefits}: Props) => (
     </div>
     <div className={styles.card__textContainer}>
       <div className={styles.card__textContainer__title}>{title}</div>
-      <ul className={styles.card__textContainer__description}>
+      <ul className={styles.card__textContainer__benefits}>
         {benefits.map((benefit, index) => (
-          <li key={index} className={styles.card__textContainer__description__item}>{benefit}</li>
+          <li key={index} className={styles.card__textContainer__benefits__item}>{benefit}</li>
         ))}
       </ul>
       <button
