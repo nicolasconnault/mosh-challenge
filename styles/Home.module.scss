@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'ClearFace';
+  src: url('../asset/fonts/ClearfaceStd-Regular.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('../asset/fonts/MaisonNeueLight.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main {
+  font-family: MaisonNeue, sans-serif;
+}
+
+.hero {
+  background-color: rgb(var(--highlight-container-rgb));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  padding: 50px;
+
+  &__titleContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    &__title {
+      font-family: ClearFace, serif;
+      font-size: 48px;
+    }
+  }
+
+  &__titleSubcontainer {
+    min-width: 350px;
+    &__subtitle {
+
+      font-size: 18px;
+    }
+  }
+
+  &__cardsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+
+}

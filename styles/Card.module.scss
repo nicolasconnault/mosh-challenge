@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  column-gap: 20px;
+
+  &__imageContainer {
+    position: relative;
+    height: 200px;
+    width: 285px;
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &__description {
+      padding-inline-start: 0;
+      list-style: none;
+      line-height: 30px;
+
+      &__item {
+        background-image: url('../public/images/circle-check.png');
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        padding-left: 24px;
+        vertical-align: middle;
+      }
+    }
+
+    &__cta {
+      background-color: rgb(var(--primary-accent-rgb));
+      min-width: 220px;
+      color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+}
