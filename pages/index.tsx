@@ -4,8 +4,17 @@ import styles from '@/styles/Home.module.scss'
 import consultationImage from '../public/images/consultation.png'
 import therapyImage from '../public/images/therapy.png'
 import Card from '../components/Card'
+import { GetStaticProps } from "next";
 
-export default function Home() {
+interface HomeProps {
+  data: HeroBenefits;
+}
+
+interface HeroBenefits {
+  [key: string]: [string]
+}
+
+export default function Home({ data }: HomeProps ) {
   return (
     <>
       <Head>
@@ -36,16 +45,26 @@ export default function Home() {
               title="Free Online Doctor Consultation"
               ctaLabel="get started"
               ctaUrl="https://www.getmosh.com.au/quizzes/mental_health_quiz"
+              benefits={data['consultation']}
             />
             <Card
               image={therapyImage}
               title="One-on-one therapy sessions"
               ctaLabel="book therapist"
               ctaUrl="https://www.getmosh.com.au/booking/mental_health"
+              benefits={data['therapy']}
             />
           </div>
         </div>
       </main>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const res = await fetch(`https://moshhero.free.beeceptor.com/my/api/options`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
 }

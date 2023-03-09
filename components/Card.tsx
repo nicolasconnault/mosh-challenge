@@ -5,9 +5,10 @@ type Props = {
   image: StaticImageData,
   ctaLabel: string,
   ctaUrl: string,
-  title: string
+  title: string,
+  benefits: [string]
 };
-const Card = ({image, ctaLabel, ctaUrl, title}: Props) => (
+const Card = ({image, ctaLabel, ctaUrl, title, benefits}: Props) => (
   <div className={styles.card}>
     <div className={styles.card__imageContainer}>
       <Image fill alt={title} src={image} />
@@ -15,8 +16,9 @@ const Card = ({image, ctaLabel, ctaUrl, title}: Props) => (
     <div className={styles.card__textContainer}>
       <div className={styles.card__textContainer__title}>{title}</div>
       <ul className={styles.card__textContainer__description}>
-        <li className={styles.card__textContainer__description__item}>Item 1</li>
-        <li className={styles.card__textContainer__description__item}>Item 2</li>
+        {benefits.map((benefit, index) => (
+          <li key={index} className={styles.card__textContainer__description__item}>{benefit}</li>
+        ))}
       </ul>
       <button
         className={styles.card__textContainer__cta}
