@@ -1,0 +1,27 @@
+.accordion {
+  overflow: hidden;
+
+  &__title {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 16px;
+    color: rgb(var(--heading-rgb));
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+
+    &--open {
+      max-height: 100%;
+      overflow: hidden;
+      margin-bottom: -16px;
+    }
+  }
+}

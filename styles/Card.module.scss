@@ -1,11 +1,30 @@
+$card-width: 320px;
+
 .card {
   display: flex;
   column-gap: 20px;
+  flex-wrap: wrap;
 
+  @media(max-width: 786px) {
+    justify-content: center;
+    flex-direction: column;
+    max-width: $card-width;
+    margin: 0 auto;
+  }
+  @media(min-width: 787px) and (max-width: 1415px) {
+    display: block;
+    max-width: $card-width;
+  }
   &__imageContainer {
     position: relative;
     height: 200px;
-    width: 285px;
+    width: $card-width;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &__image {
+      object-fit: cover;
+    }
   }
 
   &__textContainer {
@@ -16,32 +35,54 @@
     &__title {
       font-size: 18px;
       font-weight: 600;
+      color: rgb(var(--heading-rgb));
     }
 
-    &__benefits {
-      padding-inline-start: 0;
-      list-style: none;
-      line-height: 30px;
+    &__benefitsContainer {
+      &-mobile {
+        @media(min-width: 1415px) {
+          display: none;
+        }
+      }
+      &-desktop {
+        @media(max-width: 1415px) {
+          display: none;
+        }
+      }
 
-      &__item {
-        background-image: url('../public/images/circle-check.png');
-        background-repeat: no-repeat;
-        background-position: 0 50%;
-        padding-left: 24px;
-        vertical-align: middle;
+      &__benefits {
+        color: rgb(var(--heading-rgb));
+        padding-inline-start: 0;
+        list-style: none;
+        line-height: 30px;
+        font-size: 14px;
+        @media(min-width: 786px) {
+          font-size: 16px;
+        }
+
+        &__item {
+          background-image: url('../public/images/circle-check.png');
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+          padding-left: 32px;
+          vertical-align: middle;
+        }
       }
     }
 
     &__cta {
       background-color: rgb(var(--primary-accent-rgb));
+      font-family: MaisonNeue, sans-serif;
+      font-weight: 600;
+      color: rgb(var(--button-white-rgb));
       min-width: 220px;
-      color: white;
       font-size: 14px;
       text-transform: uppercase;
       padding: 16px 24px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      margin-top: 16px;
     }
   }
 }

@@ -32,9 +32,7 @@ export default function Home({ data }: HomeProps ) {
                 Get back on track
               </h2>
               <p className={styles.hero__titleContainer__subtitle}>
-                Treatment plan in 24 hours.
-              </p>
-              <p className={styles.hero__titleContainer__subtitle}>
+                Treatment plan in 24 hours.<br />
                 Treat anxiety, depression &amp; more
               </p>
             </div>

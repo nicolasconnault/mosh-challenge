@@ -1,0 +1,26 @@
+.caretIcon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: rgb(var(--heading-rgb));
+  vertical-align: middle;
+
+  &_up {
+    transform: rotate(180deg);
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    color: rgb(var(--heading-rgb));
+    vertical-align: middle;
+  }
+
+  path {
+    fill: none;
+  }
+}
