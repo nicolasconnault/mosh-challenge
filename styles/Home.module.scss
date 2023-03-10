@@ -38,11 +38,12 @@
   justify-content: center;
   column-gap: 20px;
   flex-wrap: wrap;
-  padding: 50px;
   flex-direction: column;
+  padding-bottom: 50px;
 
   @media(min-width: 1415px) {
     flex-direction: row;
+    padding: 50px;
   }
 
   &__titleContainer {
