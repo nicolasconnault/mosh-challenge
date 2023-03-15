@@ -41,7 +41,7 @@
   flex-direction: column;
   padding-bottom: 50px;
 
-  @media(min-width: 1415px) {
+  @media(min-width: 1432px) {
     flex-direction: row;
     padding: 50px;
   }
@@ -75,7 +75,7 @@
   &__titleSubcontainer {
     min-width: 350px;
 
-    @media(max-width: 1415px) {
+    @media(max-width: 1432px) {
       text-align: center;
     }
     &__subtitle {
@@ -90,12 +90,12 @@
     @media(max-width: 786px) {
       flex: 1;
     }
-    @media(min-width: 787px) and (max-width: 1415px) {
+    @media(min-width: 787px) and (max-width: 1432px) {
       flex-direction: row;
       margin-top: 22px;
       column-gap: 24px;
     }
-    @media(min-width: 1415px) {
+    @media(min-width: 1432px) {
       flex: 1;
     }
   }

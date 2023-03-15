@@ -11,7 +11,7 @@ $card-width: 328px;
     max-width: $card-width;
     margin: 0 auto;
   }
-  @media(min-width: 787px) and (max-width: 1415px) {
+  @media(min-width: 787px) and (max-width: 1432px) {
     display: block;
     max-width: $card-width;
   }
@@ -40,12 +40,12 @@ $card-width: 328px;
 
     &__benefitsContainer {
       &-mobile {
-        @media(min-width: 1415px) {
+        @media(min-width: 1432px) {
           display: none;
         }
       }
       &-desktop {
-        @media(max-width: 1415px) {
+        @media(max-width: 1432px) {
           display: none;
         }
       }

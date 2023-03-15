@@ -35,7 +35,7 @@ const Card = ({image, ctaLabel, ctaUrl, title, benefits}: Props) => (
       </div>
       <button
         className={styles.card__textContainer__cta}
-        onClick={() => window.open(ctaUrl, "_blank", "noopener,noreferrer")}
+        onClick={() => window.open(ctaUrl, "noreferrer")}
       >
         {ctaLabel}
       </button>
